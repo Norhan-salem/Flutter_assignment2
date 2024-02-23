@@ -101,14 +101,14 @@ class _CreateTaskPageState extends State<CreateTaskPage> {
                 Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AssetData.secondaryColor, // This makes the button blue
-                      maximumSize: Size(200, 60), // This makes the button wider
+                      backgroundColor: AssetData.secondaryColor, 
+                      maximumSize: Size(200, 60), 
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center, // This centers the row contents
+                      mainAxisAlignment: MainAxisAlignment.center, 
                       children: [
-                        SvgPicture.asset('lib/constants/svgs/plus.svg', fit: BoxFit.scaleDown), // Replace with your plus sign SVG
-                        SizedBox(width: 10), // This adds some spacing between the icon and the text
+                        SvgPicture.asset('lib/constants/svgs/plus.svg', fit: BoxFit.scaleDown),
+                        SizedBox(width: 10), 
                         Text('Add', style: TextStyle( fontSize: 18, color: Colors.white)),
                       ],
                     ),
