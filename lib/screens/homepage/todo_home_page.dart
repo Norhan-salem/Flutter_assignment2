@@ -2,23 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pie_menu/pie_menu.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/asset_data.dart';
 import '../../constants/colors.dart';
 import '../../controllers/tasks_provider.dart';
 import '../../models/task.dart';
 import '../../widgets/custom_appbar.dart';
+import '../../widgets/pinned_task_dashboard.dart';
 import 'components/greeting.dart';
+import 'components/tasks.dart';
 
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomePage> {
   final List<Task> _tasks = [];
 
   @override
@@ -48,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const GreetingComp(),
                   const SizedBox(height: 32),
-                  if (pinnedTask != null) PinnedTask(task: pinnedTask),
+                  if (pinnedTask != null) PinnedTaskDashboard(task: pinnedTask),
                   const SizedBox(height: 32),
                   Expanded(child: TasksComp(tasks: tasksProvider.tasks)),
                 ],
@@ -69,4 +70,3 @@ class _HomeScreenState extends State<HomeScreen> {
     buttonThemeHovered: PieButtonTheme(backgroundColor: AppColors.subtextColor, iconColor: AppColors.text),
   );
 }
-

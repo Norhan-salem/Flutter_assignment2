@@ -4,10 +4,13 @@ import '../../../constants/asset_data.dart';
 import '../../../constants/routes.dart';
 import '../../../models/task.dart';
 import '../../../widgets/custom_button.dart';
+import '../../../widgets/task_tile.dart';
 
-class YourTasksSection extends StatelessWidget {
+class TasksComp extends StatelessWidget {
+
+
   final List<Task> tasks;
-  const YourTasksSection({super.key, required this.tasks});
+  const TasksComp({super.key, required this.tasks});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +42,7 @@ class YourTasksSection extends StatelessWidget {
                   final task = tasks[index];
                   return TaskTile(task: task);
                   },
-          );
+           ),
         ),
       ],
     );

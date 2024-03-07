@@ -8,9 +8,7 @@ class GreetingComp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        CircleAvatar(
-          radius: 25,
-        ),
+        CircleAvatar( radius: 25 ),
         SizedBox(width: 16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,

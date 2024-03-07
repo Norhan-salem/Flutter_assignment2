@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../../constants/colors.dart';
 
-class ProgressIndicator extends StatelessWidget {
+class TaskProgress extends StatelessWidget {
+
   final double progress;
   final double size;
 
-  const ProgressIndicator({
+  const TaskProgress({
     super.key,
     required this.progress,
     this.size = 50,
