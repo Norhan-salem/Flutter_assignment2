@@ -1,15 +1,13 @@
 class Validators {
-  static String? checkLengthValidator(String? input, int minCharacters) {
-    if (input == null) {
-      return 'Input not found.';
-    }
-    if (input.length <= minCharacters) {
-      return 'Input cannot be less than $minCharacters characters';
+  static String? checkLength(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'This field is required';
     }
     return null;
   }
+  }
 
-  static String? emailValidator(String? email) {
+ String? emailValidator(String? email) {
     if (email == null) {
       return 'Email not found.';
     }
@@ -21,7 +19,7 @@ class Validators {
     return null;
   }
 
-  static String? passwordValidator(String? password) {
+  String? passwordValidator(String? password) {
     if (password == null) {
       return 'Password not found.';
     }
@@ -34,7 +32,7 @@ class Validators {
     return null;
   }
 
-  static String? confirmPasswordValidator(String? password, String? confirmPassword) {
+   String? confirmPasswordValidator(String? password, String? confirmPassword) {
     if (confirmPassword == null) {
       return 'password confirmation not found.';
     }
@@ -43,5 +41,5 @@ class Validators {
     }
     return null;
   }
-}
+
 

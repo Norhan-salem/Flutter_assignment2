@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:session3/constants/asset_data.dart';
+import 'package:session3/constants/colors.dart';
 
 class InputField extends StatelessWidget {
   final TextEditingController controller;
@@ -26,21 +27,21 @@ class InputField extends StatelessWidget {
       validator: validator,
       obscureText: obscureText,
       keyboardType: keyboardType,
-      style: TextStyle(color: AssetData.subtextColor),
+      style: TextStyle(color: AppColors.subtextColor),
       // This sets the input text color
       decoration: InputDecoration(
-        fillColor: AssetData.inputFieldBackgroundColor,
+        fillColor: AppColors.inputFieldBackgroundColor,
         // This sets the background color
         filled: true,
         // Don't forget to set filled to true
         focusedBorder: _getBorder(),
-        focusedErrorBorder: _getBorder(color: AssetData.crossColor),
+        focusedErrorBorder: _getBorder(color: AppColors.crossColor),
         enabledBorder: _getBorder(),
-        errorBorder: _getBorder(color: AssetData.crossColor),
+        errorBorder: _getBorder(color: AppColors.crossColor),
         hintText: hintText,
         hintStyle: const TextStyle(
           fontSize: 14,
-          color: AssetData.subtextColor,
+          color: AppColors.subtextColor,
         ),
         prefixIcon: prefix,
         suffixIcon: suffix,
@@ -48,7 +49,7 @@ class InputField extends StatelessWidget {
     );
   }
 
-  InputBorder _getBorder({Color color = AssetData.inputFieldBackgroundColor}) {
+  InputBorder _getBorder({Color color = AppColors.inputFieldBackgroundColor}) {
     return OutlineInputBorder(
       borderSide: BorderSide(
         width: 1,

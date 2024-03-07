@@ -1,15 +1,11 @@
-import 'package:flutter/material.dart';
-
 class AssetData {
-
-  static const String imagePath = 'assets/image.png';
-
-  static const Color inputFieldBackgroundColor = Color(0xFF2D2C2C); //GREY COLOR
-  static const Color subtextColor = Color(0xFFB7B7B7); //LIGHT GREY COLOR
-  static const Color crossColor = Color(0xFF6A1E1C); //DARK RED
-  static const Color secondaryColor = Color(0xFF004A77); //BLUE
-  static const Color legendColor = Color(0xFF2685FB); //LIGHTER BLUE
-  static const Color doneColor = Color(0xFF01A050); //GREEN
-  static const Color dashboardColor = Color(0xFF313131); //DARK GREY
-
+  static const String me = 'assets/profile_pic.jpg';
+  static const String logoSvg = 'assets/logo.svg';
+  static const String addTaskSvg = 'assets/add_task.svg';
+  static const String taskPlusSvg = 'assets/task_plus.svg';
+  static const String titleSvg = 'assets/title.svg';
+  static const String settingsSvg = 'assets/settings.svg';
+  static const String pinSvg = 'assets/pin.svg';
+  static const String plusSvg = 'assets/plus.svg';
+  static const String clipboardSvg = 'assets/clipboard.svg';
 }
